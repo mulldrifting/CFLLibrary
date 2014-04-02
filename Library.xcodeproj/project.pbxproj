@@ -15,7 +15,6 @@
 		FE89637018EC8919000AB713 /* CFLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE89636F18EC8919000AB713 /* CFLAppDelegate.m */; };
 		FE89637318EC8919000AB713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE89637118EC8919000AB713 /* Main.storyboard */; };
 		FE89637618EC8919000AB713 /* CFLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE89637518EC8919000AB713 /* CFLMasterViewController.m */; };
-		FE89637918EC8919000AB713 /* CFLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE89637818EC8919000AB713 /* CFLDetailViewController.m */; };
 		FE89637B18EC8919000AB713 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE89637A18EC8919000AB713 /* Images.xcassets */; };
 		FE89638218EC8919000AB713 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE89638118EC8919000AB713 /* XCTest.framework */; };
 		FE89638318EC8919000AB713 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE89635F18EC8918000AB713 /* Foundation.framework */; };
@@ -25,6 +24,8 @@
 		FE89639B18ECA82E000AB713 /* CFLLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = FE89639A18ECA82E000AB713 /* CFLLibrary.m */; };
 		FE89639E18ECA83A000AB713 /* CFLShelf.m in Sources */ = {isa = PBXBuildFile; fileRef = FE89639D18ECA83A000AB713 /* CFLShelf.m */; };
 		FE8963A118ECA847000AB713 /* CFLBook.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8963A018ECA847000AB713 /* CFLBook.m */; };
+		FE8963A918ECB985000AB713 /* CFLLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8963A818ECB985000AB713 /* CFLLibraryViewController.m */; };
+		FE8963AC18ECBC6E000AB713 /* CFLShelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8963AB18ECBC6E000AB713 /* CFLShelfViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +52,6 @@
 		FE89637218EC8919000AB713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE89637418EC8919000AB713 /* CFLMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFLMasterViewController.h; sourceTree = "<group>"; };
 		FE89637518EC8919000AB713 /* CFLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFLMasterViewController.m; sourceTree = "<group>"; };
-		FE89637718EC8919000AB713 /* CFLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFLDetailViewController.h; sourceTree = "<group>"; };
-		FE89637818EC8919000AB713 /* CFLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFLDetailViewController.m; sourceTree = "<group>"; };
 		FE89637A18EC8919000AB713 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE89638018EC8919000AB713 /* LibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE89638118EC8919000AB713 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -65,6 +64,10 @@
 		FE89639D18ECA83A000AB713 /* CFLShelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFLShelf.m; sourceTree = "<group>"; };
 		FE89639F18ECA847000AB713 /* CFLBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFLBook.h; sourceTree = "<group>"; };
 		FE8963A018ECA847000AB713 /* CFLBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFLBook.m; sourceTree = "<group>"; };
+		FE8963A718ECB985000AB713 /* CFLLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFLLibraryViewController.h; sourceTree = "<group>"; };
+		FE8963A818ECB985000AB713 /* CFLLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFLLibraryViewController.m; sourceTree = "<group>"; };
+		FE8963AA18ECBC6E000AB713 /* CFLShelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFLShelfViewController.h; sourceTree = "<group>"; };
+		FE8963AB18ECBC6E000AB713 /* CFLShelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFLShelfViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +172,10 @@
 				FE89637118EC8919000AB713 /* Main.storyboard */,
 				FE89637418EC8919000AB713 /* CFLMasterViewController.h */,
 				FE89637518EC8919000AB713 /* CFLMasterViewController.m */,
-				FE89637718EC8919000AB713 /* CFLDetailViewController.h */,
-				FE89637818EC8919000AB713 /* CFLDetailViewController.m */,
+				FE8963A718ECB985000AB713 /* CFLLibraryViewController.h */,
+				FE8963A818ECB985000AB713 /* CFLLibraryViewController.m */,
+				FE8963AA18ECBC6E000AB713 /* CFLShelfViewController.h */,
+				FE8963AB18ECBC6E000AB713 /* CFLShelfViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -287,12 +292,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE89639B18ECA82E000AB713 /* CFLLibrary.m in Sources */,
+				FE8963AC18ECBC6E000AB713 /* CFLShelfViewController.m in Sources */,
 				FE89637018EC8919000AB713 /* CFLAppDelegate.m in Sources */,
 				FE8963A118ECA847000AB713 /* CFLBook.m in Sources */,
 				FE89636C18EC8918000AB713 /* main.m in Sources */,
 				FE89637618EC8919000AB713 /* CFLMasterViewController.m in Sources */,
 				FE89639E18ECA83A000AB713 /* CFLShelf.m in Sources */,
-				FE89637918EC8919000AB713 /* CFLDetailViewController.m in Sources */,
+				FE8963A918ECB985000AB713 /* CFLLibraryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

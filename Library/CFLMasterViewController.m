@@ -7,7 +7,9 @@
 //
 
 #import "CFLMasterViewController.h"
-
+#import "CFLLibrary.h"
+#import "CFLShelf.h"
+#import "CFLBook.h"
 #import "CFLDetailViewController.h"
 
 @interface CFLMasterViewController () {
@@ -62,15 +64,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return _libraries.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyBasicCell" forIndexPath:indexPath];
+    CFLLibrary *library = [self.libraries objectAtIndex:indexPath.row];
+    cell.textLabel.text = library.title;
     return cell;
 }
 

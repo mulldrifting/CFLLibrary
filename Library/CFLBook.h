@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class CFLShelf;
+
 @interface CFLBook : NSObject
+
+@property NSString *title;
+
+- (id)initWithTitle:(NSString*)title;
+- (void)enshelf:(CFLShelf*)shelf;
+- (void)unshelf:(CFLShelf*)shelf index:(int)index;
 
 @end

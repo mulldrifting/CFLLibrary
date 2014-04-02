@@ -7,7 +7,22 @@
 //
 
 #import "CFLBook.h"
+#import "CFLShelf.h"
 
 @implementation CFLBook
+
+- (id)initWithTitle:(NSString *)title {
+    if ((self = [super init])) {
+        self.title = title;
+    }
+    return self;
+}
+
+- (void)enshelf:(CFLShelf *)shelf {
+    [shelf.books addObject:self];
+}
+- (void)unshelf:(CFLShelf *)shelf index:(int)index {
+    [shelf.books removeObjectAtIndex:index];
+}
 
 @end

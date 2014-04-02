@@ -10,6 +10,8 @@
 
 @interface CFLMasterViewController : UITableViewController
 
+@property (strong) NSMutableArray *libraries;
+
 // - (void)addTapped:(id)sender;
 
 @end

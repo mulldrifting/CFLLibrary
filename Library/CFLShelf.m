@@ -10,4 +10,12 @@
 
 @implementation CFLShelf
 
+- (id)initWithTitle:(NSString *)title books:(NSMutableArray *)books {
+    if ((self = [super init])) {
+        self.title = title;
+        self.books = [NSMutableArray arrayWithObjects:nil];
+    }
+    return self;
+}
+
 @end
