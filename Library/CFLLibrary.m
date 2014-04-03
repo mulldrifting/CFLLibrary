@@ -7,13 +7,14 @@
 //
 
 #import "CFLLibrary.h"
+#import "CFLShelf.h"
 
 @implementation CFLLibrary
 
-- (id)initWithTitle:(NSString *)title shelves:(NSMutableArray *)shelves {
+- (id)initWithTitle:(NSString *)title {
     if ((self = [super init])) {
         self.title = title;
-        self.shelves = [NSMutableArray arrayWithObjects:nil];
+        self.shelves = [NSMutableArray arrayWithObjects:[[CFLShelf alloc] initWithTitle:@"New Shelf"], nil];
     }
     return self;
 }

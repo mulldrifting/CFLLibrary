@@ -13,6 +13,6 @@
 @property (strong) NSString *title;
 @property (strong) NSMutableArray *shelves;
 
-- (id)initWithTitle:(NSString*)title shelves:(NSMutableArray *)shelves;
+- (id)initWithTitle:(NSString*)title;
 
 @end

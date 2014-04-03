@@ -18,11 +18,13 @@
     return self;
 }
 
+
 - (void)enshelf:(CFLShelf *)shelf {
     [shelf.books addObject:self];
 }
 - (void)unshelf:(CFLShelf *)shelf index:(int)index {
     [shelf.books removeObjectAtIndex:index];
 }
+ 
 
 @end

@@ -11,10 +11,10 @@
 #import "CFLShelf.h"
 #import "CFLBook.h"
 #import "CFLDetailViewController.h"
+#import "CFLLibraryViewController.h"
+#import "CFLShelfViewController.h"
 
-@interface CFLMasterViewController () {
-    NSMutableArray *_objects;
-}
+@interface CFLMasterViewController () 
 @end
 
 @implementation CFLMasterViewController
@@ -35,7 +35,16 @@
     
     self.title = @"Libraries";
     
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    CFLLibrary *library1 = [[CFLLibrary alloc] initWithTitle:@"Library1"];
+    _libraries = [NSMutableArray arrayWithObjects:library1, nil];
+    
+//    CFLShelf *shelf1 = [[CFLShelf alloc] initWithTitle:@"Shelf1"];
+//    CFLBook *book1 = [[CFLBook alloc] initWithTitle:@"Book1"];
+//    [shelf1.books addObject:book1];
+//    [library1.shelves addObject:shelf1];
+//    [self.libraries addObject:library1];
+
+    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
     //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addTapped:)];
 }
 
@@ -47,10 +56,10 @@
 
 - (void)insertNewObject:(id)sender
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
+    if (!_libraries) {
+        _libraries = [[NSMutableArray alloc] init];
     }
-    [_objects insertObject:[NSDate date] atIndex:0];
+    [_libraries insertObject:[[CFLLibrary alloc] initWithTitle:@"New Library"] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -84,7 +93,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
+        [_libraries removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -113,10 +122,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"showLibrarySegue"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        CFLLibrary *library = _libraries[indexPath.row];
+        [[segue destinationViewController] setLibrary:library];
     }
 }
 

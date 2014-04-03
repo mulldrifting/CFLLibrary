@@ -16,14 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    CFLLibrary *library1 = [[CFLLibrary alloc] initWithTitle:@"Library1"];
-    NSMutableArray *libraries = [NSMutableArray arrayWithObjects:library1, nil];
-    
-    UINavigationController *navController = (UINavigationController *) self.window.rootViewController;
-    CFLMasterViewController *masterController = [navController.viewControllers objectAtIndex:0];
-    masterController.libraries = libraries;
-    
-    // Override point for customization after application launch.
+        // Override point for customization after application launch.
     return YES;
 }
 							

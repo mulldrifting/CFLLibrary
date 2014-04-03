@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CFLLibrary.h"
 
 @interface CFLLibraryViewController : UITableViewController
+
+@property (weak, nonatomic) CFLLibrary *library;
 
 @end

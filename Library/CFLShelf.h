@@ -13,6 +13,6 @@
 @property NSString *title;
 @property NSMutableArray *books;
 
-- (id)initWithTitle:(NSString*)title books:(NSMutableArray *)books;
+- (id)initWithTitle:(NSString*)title;
 
 @end

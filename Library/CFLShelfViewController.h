@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CFLShelf.h"
 
 @interface CFLShelfViewController : UITableViewController
+
+@property (weak, nonatomic) CFLShelf *shelf;
 
 @end
