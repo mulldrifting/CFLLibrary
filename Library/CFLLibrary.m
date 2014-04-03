@@ -8,6 +8,7 @@
 
 #import "CFLLibrary.h"
 #import "CFLShelf.h"
+#import "CFLBook.h"
 
 @implementation CFLLibrary
 
@@ -17,6 +18,14 @@
         self.shelves = [NSMutableArray arrayWithObjects:[[CFLShelf alloc] initWithTitle:@"New Shelf"], nil];
     }
     return self;
+}
+
+-(void)reportBooks {
+    for (CFLShelf *currentShelf in self.shelves) {
+        for (CFLBook *currentBook in currentShelf.books) {
+            NSLog(@"%@", currentBook.title);
+        }
+    }
 }
 
 @end

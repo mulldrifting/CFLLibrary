@@ -18,7 +18,6 @@
     return self;
 }
 
-
 - (void)enshelf:(CFLShelf *)shelf {
     [shelf.books addObject:self];
 }
