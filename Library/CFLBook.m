@@ -11,19 +11,18 @@
 
 @implementation CFLBook
 
-- (id)initWithTitle:(NSString *)title {
+- (id)initWithTitle:(NSString *)title whichShelf:(NSString *)whichShelf {
     if ((self = [super init])) {
-        self.title = title;
+        _title = title;
+        _whichShelf = whichShelf;
     }
     return self;
 }
 
-- (void)enshelf:(CFLShelf *)shelf {
-    [shelf.books addObject:self];
-}
-- (void)unshelf:(CFLShelf *)shelf index:(int)index {
-    [shelf.books removeObjectAtIndex:index];
-}
- 
-
+//- (void)enshelf:(CFLShelf *)shelf {
+//    [shelf.books addObject:self];
+//}
+//- (void)unshelf:(CFLShelf *)shelf index:(int)index {
+//    [shelf.books removeObjectAtIndex:index];
+//}
 @end

@@ -10,8 +10,8 @@
 
 @interface CFLShelf : NSObject
 
-@property NSString *title;
-@property NSMutableArray *books;
+@property (weak, nonatomic) NSString *title;
+@property (strong, nonatomic) NSMutableArray *books;
 
 - (id)initWithTitle:(NSString*)title;
 

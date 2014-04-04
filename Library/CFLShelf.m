@@ -14,7 +14,7 @@
 - (id)initWithTitle:(NSString *)title {
     if ((self = [super init])) {
         self.title = title;
-        self.books = [NSMutableArray arrayWithObjects:[[CFLBook alloc] initWithTitle:@"New Book"], nil];
+        self.books = [NSMutableArray arrayWithObjects:nil];
     }
     return self;
 }

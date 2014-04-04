@@ -12,10 +12,9 @@
 
 @interface CFLBook : NSObject
 
-@property NSString *title;
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *whichShelf;
 
-- (id)initWithTitle:(NSString*)title;
-- (void)enshelf:(CFLShelf*)shelf;
-- (void)unshelf:(CFLShelf*)shelf index:(int)index;
+- (id)initWithTitle:(NSString*)title whichShelf:(NSString*)whichShelf;
 
 @end

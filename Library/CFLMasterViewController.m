@@ -38,6 +38,8 @@
     CFLLibrary *library1 = [[CFLLibrary alloc] initWithTitle:@"Library1"];
     _libraries = [NSMutableArray arrayWithObjects:library1, nil];
     
+    
+    
 //    CFLShelf *shelf1 = [[CFLShelf alloc] initWithTitle:@"Shelf1"];
 //    CFLBook *book1 = [[CFLBook alloc] initWithTitle:@"Book1"];
 //    [shelf1.books addObject:book1];
