@@ -15,7 +15,7 @@
 - (id)initWithTitle:(NSString *)title {
     if ((self = [super init])) {
         self.title = title;
-        self.shelves = [NSMutableArray arrayWithObjects:[[CFLShelf alloc] initWithTitle:@"Shelf1"], nil];
+        self.shelves = [NSMutableArray arrayWithObjects:[[CFLShelf alloc] initWithTitle:@"Shelf1"], [[CFLShelf alloc] initWithTitle:@"Shelf2"], nil];
     }
     return self;
 }

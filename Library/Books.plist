@@ -23,5 +23,27 @@
                 
             </dict>
         </array>
+        <key>Shelf2</key>
+        <array>
+            <dict>
+                <key>Title</key>
+                <string>Book1</string>
+                
             </dict>
+            <dict>
+                <key>Title</key>
+                <string>Book2</string>
+                
+                
+            </dict>
+            <dict>
+                <key>Title</key>
+                <string>Book3</string>
+                
+                
+            </dict>
+        </array>
+    </dict>
+    
+    
 </plist>

@@ -38,7 +38,11 @@
     _plistCatPath = [[NSBundle mainBundle] pathForResource:@"Books" ofType:@"plist"];
     _bookDic = [[NSMutableDictionary alloc] initWithContentsOfFile:_plistCatPath];
     
+//    NSLog(@"%@",[[NSBundle mainBundle] resourcePath]);
+    
     _shelf.books = _bookDic[_shelf.title];
+    
+    //[self updateDic:_shelf.books];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -166,9 +170,8 @@
 }
 
 - (void)updateDic:(NSMutableArray*)books {
-    NSLog(@"entering update");
     NSString *errorDesc = nil;
-    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *plistPath = [rootPath stringByAppendingString:@"/Books.plist"];
     NSLog(@"%@ %@", rootPath,plistPath);
     [_bookDic setObject:books forKey:_shelf.title];
