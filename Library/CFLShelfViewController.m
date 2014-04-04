@@ -35,8 +35,8 @@
     
     self.title = _shelf.title;
     
-    _plistCatPath = [[NSBundle mainBundle] pathForResource:@"Books" ofType:@"plist"];
-    _bookDic = [[NSMutableDictionary alloc] initWithContentsOfFile:_plistCatPath];
+    _plistPath = @"/Users/Drifter/Documents/Books.plist";
+    _bookDic = [[NSMutableDictionary alloc] initWithContentsOfFile:_plistPath];
     
 //    NSLog(@"%@",[[NSBundle mainBundle] resourcePath]);
     
@@ -171,14 +171,15 @@
 
 - (void)updateDic:(NSMutableArray*)books {
     NSString *errorDesc = nil;
-    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *plistPath = [rootPath stringByAppendingString:@"/Books.plist"];
-    NSLog(@"%@ %@", rootPath,plistPath);
+//    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//    NSString *plistPath = [rootPath stringByAppendingString:@"/Books.plist"];
+    //NSLog(@"%@ %@", rootPath,plistPath);
+   // NSString *plistPath = @"/Users/Drifter/Documents/Books.plist";
     [_bookDic setObject:books forKey:_shelf.title];
     if (_bookDic)
     {
         NSLog(@"entering write");
-        [_bookDic writeToFile:plistPath atomically:YES];
+        [_bookDic writeToFile:_plistPath atomically:YES];
     } else
     {
         NSLog(@"[Error] Application Did Enter Background {saving file error}: %@", errorDesc);

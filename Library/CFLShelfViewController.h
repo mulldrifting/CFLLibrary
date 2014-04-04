@@ -12,7 +12,7 @@
 @interface CFLShelfViewController : UITableViewController
 
 @property (weak, nonatomic) CFLShelf *shelf;
-@property (strong, nonatomic) NSString *plistCatPath;
+@property (strong, nonatomic) NSString *plistPath;
 @property (strong, nonatomic) NSMutableDictionary *bookDic;
 
 @end
